@@ -1,10 +1,12 @@
 #Google Glass Mirror API Ruby / Sinatra Scaffolding App
 
-Scaffold for creating Google Glass Mirror API apps in Ruby on Sinatra. This was created while making Facebook for Glass - https://facebookglass.herokuapp.com and makes it simple to connect to Glass and one other service and to send items from Glass to that other service.
+Scaffold for creating Google Glass Mirror API apps in Ruby on Sinatra. 
+This was created while making Facebook for Glass - https://facebookglass.herokuapp.com and makes it simple to connect to Glass and one other service and to send items from Glass to that other service.
 
 ##Getting Started
 
-This project relies on a local Postgres database. Create a local database and head in to `config/database.yml` to configure the app for your database.
+This project relies on a local Postgres database. 
+Create a local database and head in to `config/database.yml` to configure the app for your database.
 
 Fire it up:
 `bundle exec unicorn`
