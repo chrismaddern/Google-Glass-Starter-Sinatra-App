@@ -1,0 +1,12 @@
+source "https://rubygems.org"
+gem 'unicorn'
+gem 'sinatra'
+gem 'google-api-client'
+gem "activerecord"
+gem "sinatra-activerecord"
+gem "pg"
+gem "rake"
+gem "json"
+gem "nokogiri"
+gem 'newrelic_rpm'
+gem 'aws-s3'

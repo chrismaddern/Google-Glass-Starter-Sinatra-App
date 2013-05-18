@@ -1,0 +1,76 @@
+/* ---------------------------------------------------------------------- */
+/*  Custom Grid
+/* ---------------------------------------------------------------------- */
+
+.container.wide {
+	margin:0 auto;
+	width:980px;
+	position:relative;
+}
+
+.container {
+	margin:0 auto;
+	width:940px;
+	position:relative;
+}
+
+.container .one-half,
+.container .one-third,
+.container .one-fourth,
+.container .two-thirds,
+.container .three-fourths {
+	float:left;
+	margin-right:20px;
+}
+
+.container .one-half.last,
+.container .one-third.last,
+.container .one-fourth.last,
+.container .two-thirds.last,
+.container .three-fourths.last {
+	margin-right:0;
+}
+
+.container .one-half       { width:460px; } 
+.container .one-third      { width:300px; }  
+.container .one-fourth     { width:220px; }   
+.container .two-thirds     { width:620px; }   
+.container .three-fourths  { width:700px; }
+
+
+/* ------------------------------------------- */
+/*  Responsive Grid - 
+/*		1. Tablet 
+/*		2. Mobile Portrait
+/*		3. Mobile Landscape
+/* ------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.container.wide            { width:768px; }
+	.container                 { width:748px; }
+	.container .one-half       { width:364px; } 
+	.container .one-third      { width:236px; }  
+	.container .one-fourth     { width:172px; }   
+	.container .two-thirds     { width:492px; }   
+	.container .three-fourths  { width:508px; }
+}
+
+@media only screen and (max-width: 767px) {
+	.container.wide  { width:320px; }
+	.container       { width:300px; }
+	.container .one-half,  
+	.container .one-third, 
+	.container .one-fourth,
+	.container .two-thirds,
+	.container .three-fourths { width:300px; margin-right:0; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.container.wide  { width:440px; }
+	.container       { width:420px; }
+	.container .one-half,  
+	.container .one-third, 
+	.container .one-fourth,
+	.container .two-thirds,
+	.container .three-fourths { width:420px; margin-right:0; }
+}
