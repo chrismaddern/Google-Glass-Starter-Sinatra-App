@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mirror API (Google Glass) Sinatra App Template : Template for creating Google Glass Mirror API apps on Sinatra with Ruby" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mirror API (Google Glass) Sinatra App Template</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chrismaddern/google-glass-mirror-ruby-sinatra-scaffold">View on GitHub</a>
+
+          <h1 id="project_title">Mirror API (Google Glass) Sinatra App Template</h1>
+          <h2 id="project_tagline">Template for creating Google Glass Mirror API apps on Sinatra with Ruby</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chrismaddern/google-glass-mirror-ruby-sinatra-scaffold/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chrismaddern/google-glass-mirror-ruby-sinatra-scaffold/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Google Glass Mirror API Ruby / Sinatra Template App</h1>
+
+<p>Scaffold for creating Google Glass Mirror API apps in Ruby on Sinatra. 
+This was created while making Facebook for Glass - <a href="https://facebookglass.herokuapp.com">https://facebookglass.herokuapp.com</a> and makes it simple to connect to Glass and one other service and to send items from Glass to that other service.</p>
+
+<h2>Getting Started</h2>
+
+<p>This project relies on a local Postgres database. 
+Create a local database and head in to <code>config/database.yml</code> to configure the app for your database.</p>
+
+<p>Fire it up:
+<code>bundle exec unicorn</code></p>
+
+<p>You should see something like this:
+<img src="http://www.chrismaddern.com/images/google-glass-mirror-app-screen.png" alt="ScreenShot"></p>
+
+<p>Now at the top of <code>application.rb</code>, edit the following:</p>
+
+<div class="highlight"><pre>  <span class="no">APP_NAME</span>        <span class="o">=</span> <span class="s2">"YOUR_APP_NAME"</span>
+  <span class="no">APP_IMAGE_URL</span>   <span class="o">=</span> <span class="s2">"YOUR_APP_IMAGE_URL"</span>
+  <span class="no">SERVICE_NAME</span>    <span class="o">=</span> <span class="s2">"SERVICE_NAME"</span>
+
+  <span class="n">set</span> <span class="ss">:bucket</span><span class="p">,</span>      <span class="s1">'YOUR_S3_BUCKET'</span>
+  <span class="n">set</span> <span class="ss">:s3_key</span><span class="p">,</span>      <span class="s1">'YOUR_S3_KEY'</span>
+  <span class="n">set</span> <span class="ss">:s3_secret</span><span class="p">,</span>   <span class="s1">'YOUR_S3_SECRET'</span>
+</pre></div>
+
+<p>Open <code>helpers/yourservicehelper.rb</code> and implement the following methods:</p>
+
+<div class="highlight"><pre>  <span class="k">def</span> <span class="nf">service_auth_url</span>
+  <span class="k">def</span> <span class="nf">service_auth_object</span> <span class="c1"># an oauth object representing the connection to the service you're using</span>
+  <span class="k">def</span> <span class="nf">share_action</span><span class="p">(</span><span class="n">img_url</span><span class="p">,</span> <span class="n">access_token</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">share_action_video</span><span class="p">(</span><span class="n">img_url</span><span class="p">,</span> <span class="n">access_token</span><span class="p">)</span>
+</pre></div>
+
+<p>You should now have a very basic Glass application that will authorize with Glass &amp; your service and can start implementing new features!</p>
+
+<h2>Learn More</h2>
+
+<p>The Mirror API developer reference is a great resource and has the answers to most questions
+<a href="https://developers.google.com/glass/v1/reference/">https://developers.google.com/glass/v1/reference/</a></p>
+
+<p>Feel free to drop me an email (chris - at- applaunch.us) if you have questions or open a Git Issue.</p>
+
+<h2>License</h2>
+
+<p>This project is released under the MIT license. Please feel free to use &amp; extend it.</p>
+
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mirror API (Google Glass) Sinatra App Template maintained by <a href="https://github.com/chrismaddern">chrismaddern</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
